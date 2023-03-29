@@ -18,3 +18,11 @@ target_link_libraries(adaptive_clustering ${catkin_LIBRARIES})
 if(catkin_EXPORTED_TARGETS)
   add_dependencies(adaptive_clustering ${catkin_EXPORTED_TARGETS})
 endif()
+
+install(DIRECTORY
+  launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(TARGETS adaptive_clustering
+        RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
